@@ -19,7 +19,7 @@ Assessing the genetic causal effects of complex diseases on changes in general c
 ## Dependency
 GCLink is primarily built using Python (≥3.7) and R (≥4.3.0). 
 ## Citation
-If you utilize the GCLink pipeline in your research, please cite the corresponding publications and related methodological references: 
+If you utilize the GCLink pipeline in your research, please cite the corresponding publications and related methodological references:  
 (1)	Rao, S.T., J.W. Jiang, Y.Q. He, _et al._, A Positive Causal Effect of Shrimp Allergy on Major Depressive Disorder Mediated by Allergy- and Immune-Related Pathways in the East Asian Population. _J. Allergy Clin. Immunol._, 2025. 155(2): p. AB229.\
 (2)	Rao, S.T., X.T. Chen, O.Y. Ou, _et al._, A Positive Causal Effect of Shrimp Allergy on Major Depressive Disorder Mediated by Allergy- and Immune-Related Pathways in the East Asian Population. _Nutrients_, 2023. 16(1): p. 79.\
 (3)	Chen, X.T., S. Zhi, X.Y. Han, _et al._, A systematic two-sample and bidirectional MR process highlights a unidirectional genetic causal effect of allergic diseases on COVID-19 infection/severity. _J. Transl. Med._, 2024. 22(1): p. 94.
