@@ -10,7 +10,7 @@ Utilizing data from large cohorts (e.g., the UK Biobank) to evaluate the phenoty
 (3) Performing bidirectional two-sample Mendelian Randomization (MR) analyses to investigate genetic causal correlations between complex diseases. By using the most suitable MR method for each MR analysis in different scenarios, we can minimize potential bias that caused by unsuitable methods. The most suitable MR method selection was described in detail in our previous studies (Rao _et al._, _J. Allergy Clin. Immunol._, 2025; Rao _et al._, _Nutrients_, 2023; Chen _et al._, _J. Transl. Med._, 2024).
 ### 3.	Shared Molecular Mechanisms Exploration
 (1) Causal correlations with hematological traits and immune-related cells counts.  
-(2) Exploring the shared genetic basis between complex diseases at four levels:\
+(2) Exploring the shared genetic architecture between complex diseases at four levels:\
 Genetic Loci: Identifying common risk SNPs and loci using the Pairwise GWAS-PW program.\
 Enriched Tissues: Employing LDSC-SEG program to detect tissue-specific heritability enrichments.\
 Functional Genes: Integrating SMR analysis with tissue-specific bulk RNA sequencing eQTL data to pinpoint functional genes.\
