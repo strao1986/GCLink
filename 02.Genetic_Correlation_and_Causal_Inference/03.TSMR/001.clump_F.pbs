@@ -1,0 +1,73 @@
+#/bin/bash
+#PBS -N clump
+#PBS -l nodes=cu02:ppn=5
+#PBS -e clump_F.err
+#PBS -o clump_F.log
+#PBS -q batch
+#PBS -V
+
+
+### set arguments
+
+plink="/mnt/d/plink"
+ref_file="/mnt/e/move/disk_document/Projects_documents/05.allergic_diseases_mental_disorders/01.allergic_diseases_anxiety/reference/g1000_eur"
+p1="1"
+p2="1"
+r2="0.1"
+kb="1000"
+
+#anxiety_data_dir="/public/jiangjw/02.allergy_anxiety/data/Anxiety"
+#allergy_data_dir="/public/jiangjw/02.allergy_anxiety/data/Allergic_diseases"
+#IL_data_dir="/public/jiangjw/02.allergy_anxiety/data/molecules/clean_data_GRCh37/rs_trans"
+bladder_dir="/mnt/e/Extra_money(work)/No.5_customer/data/bladder_problem_5e6"
+result_dir="/mnt/e/move/disk_document/Projects_documents/05.allergic_diseases_mental_disorders/01.allergic_diseases_anxiety/data/clean_data/clump_result/01.F10"
+
+#trait_anxiety=("anxiety2018" "anxiety2021")
+#trait_allergy=("ADE2015" "ADE2021" "AR_Diagnose" "AR_SelfReport" "Asthma2018" "Asthma2020")
+#trait_IL=("IL-1a" "IL-1b" "IL-4" "IL-6")
+
+cd ${bladder_dir}
+trait_bladder=`ls *.clean.txt | cut -d '.' -f 1`
+
+### perform LD clumping in plink
+
+for i in ${trait_bladder[@]}; do
+	${plink}/plink \
+		--bfile ${ref_file}/g1000_eur \
+		--clump-snp-field rsid \
+		--clump-field p \
+		--clump-p1 ${p1} \
+		--clump-p2 ${p2} \
+		--clump-r2 ${r2} \
+		--clump-kb ${kb} \
+		--clump ${bladder_dir}/${i}.clean.txt \
+		--out ${result_dir}/${i}.LD_result
+done
+
+#for j in ${trait_allergy[@]}; do
+#        ${plink}/plink \
+#                --bfile ${ref_file}/g1000_eur \
+#                --clump-snp-field rsid \
+#                --clump-field p \
+#                --clump-p1 ${p1} \
+#                --clump-p2 ${p2} \
+#                --clump-r2 ${r2} \
+#                --clump-kb ${kb} \
+#                --clump ${allergy_data_dir}/${j}.clean.txt \
+#                --out ${result_dir}/${j}.LD_result
+#done
+
+#for k in ${trait_IL[@]}; do
+#        ${plink}/plink \
+#                --bfile ${ref_file}/g1000_eur \
+#                --clump-snp-field rsid \
+#                --clump-field p \
+#                --clump-p1 ${p1} \
+#                --clump-p2 ${p2} \
+#                --clump-r2 ${r2} \
+#                --clump-kb ${kb} \
+#                --clump ${IL_data_dir}/${k}.clean.txt \
+#                --out ${result_dir}/${k}.LD_result
+#done
+
+###############################该脚本旨在对clean.txt文件中的snp进行进一步筛选，取p<5e-8,r^2<0.1,kb=1000的SNP

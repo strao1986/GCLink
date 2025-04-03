@@ -1,0 +1,50 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -N LDSC_SEG
+#PBS -l nodes=cu05:ppn=8
+#PBS -e LDSC_SEG.err
+#PBS -o LDSC_SEG.log
+#PBS -q batch
+#PBS -V
+
+export OMP_NUM_THREADS=8
+export OPENBLAS_NUM_THREADS=8
+export MKL_NUM_THREADS=8
+export VECLIB_MAXIMUM_THREADS=8
+export NUMEXPR_NUM_THREADS=8
+
+source ~/miniconda3/bin/activate ldsc
+
+#plink_dir='/public/jiangjw/plink'
+#ref_file='/public/jiangjw/02.allergy_anxiety/reference/g1000_eur'
+#hm3_snplist_dir='/public/jiangjw/02.allergy_anxiety/reference'
+
+############################extract ref file including SNPs with maf>0.05#####################
+#${plink_dir}/plink --bfile ${ref_file}/ig1000_eur --extract ${hm3_snplist_dir}/hm3_snplist_rsid.txt --maf 0.05 --make-bed --out ${ref_file}/g1000_eur_hm3snplist_maf005
+
+
+
+
+sumstat_dir='/public/jiangjw/02.anxiety_ADs/02.LDSC'
+run_dir='/public/jiangjw/02.anxiety_ADs/02.LDSC/ldsc-master'
+snp_list_dir='/public/jiangjw/02.anxiety_ADs/reference'
+result_dir='/public/jiangjw/02.anxiety_ADs/02.LDSC/LDSC_SEG'
+baseline_model_dir='/public/jiangjw/02.anxiety_ADs/reference/LDSC_SEG_annotation_geneset/1000G_EUR_Phase3_baseline'
+multitissue_geneset_dir='/public/jiangjw/02.anxiety_ADs/reference/LDSC_SEG_annotation_geneset'
+weight_dir='/public/jiangjw/02.anxiety_ADs/reference/LDSC_SEG_annotation_geneset/weights_hm3_no_hla'
+###########################run_regression########################
+#traits=("Anxiety2021" "AR_Diagnose" "AR_SelfReport" "Asthma2020" "Asthma2018" "ADE2021" "ADE2015")
+traits="BAD"
+######generate Multi_tissue_gene_expr.ldcts file######
+
+###################run regression####################
+for i in ${traits[@]};
+do
+	python ${run_dir}/ldsc.py \
+	--h2-cts ${sumstat_dir}/${i}.sumstats.gz \
+	--ref-ld-chr ${baseline_model_dir}/baseline. \
+	--out ${result_dir}/${i}_multitissue_gene_expr \
+	--ref-ld-chr-cts ${multitissue_geneset_dir}/Multi_tissue_gene_expr.ldcts \
+	--w-ld-chr ${weight_dir}/weights.
+done
+
