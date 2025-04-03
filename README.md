@@ -8,12 +8,13 @@ Utilizing data from large cohorts (e.g., the UK Biobank) to evaluate the phenoty
 (1) Employing Linkage Disequilibrium Score Regression (LDSC) to assess genetic correlations between complex diseases.\
 (2) Using MiXeR program to estimate polygenic overlap.\
 (3) Performing bidirectional two-sample Mendelian Randomization (MR) analyses to investigate genetic causal correlations between complex diseases. By using the most suitable MR method for each MR analysis in different scenarios, we can minimize potential bias that caused by unsuitable methods. The most suitable MR method selection was described in detail in our previous studies (Rao _et al._, _J. Allergy Clin. Immunol._, 2025; Rao _et al._, _Nutrients_, 2023; Chen _et al._, _J. Transl. Med._, 2024).
-### 3.	Shared Genetic Architecture Exploration
-Exploring the shared genetic basis between complex diseases at four levels:\
-(1) Genetic Loci: Identifying common risk SNPs and loci using the Pairwise GWAS-PW program.\
-(2) Enriched Tissues: Employing LDSC-SEG program to detect tissue-specific heritability enrichments.\
-(3) Functional Genes: Integrating SMR analysis with tissue-specific bulk RNA sequencing eQTL data to pinpoint functional genes.\
-(4) Specific cell types: Using MAGMA.Celltyping program with tissue-specific single-cell RNA sequencing eQTL data to identify key cell type.
+### 3.	Shared Molecular Mechanisms Exploration
+(1) Causal correlations with hematological traits and immune-related cells counts.  
+(2) Exploring the shared genetic basis between complex diseases at four levels:\
+Genetic Loci: Identifying common risk SNPs and loci using the Pairwise GWAS-PW program.\
+Enriched Tissues: Employing LDSC-SEG program to detect tissue-specific heritability enrichments.\
+Functional Genes: Integrating SMR analysis with tissue-specific bulk RNA sequencing eQTL data to pinpoint functional genes.\
+Specific cell types: Using MAGMA.Celltyping program with tissue-specific single-cell RNA sequencing eQTL data to identify key cell type.
 ### 4.	Causal correlations with cognitive ability and behavioral symptoms 
 Assessing the genetic causal effects of complex diseases on changes in general cognitive ability and behavioral symptoms by bidirectional MR analyses, revealing the broader neuropsychological impacts.
 ## Dependency
