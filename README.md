@@ -5,17 +5,17 @@ GCLink comprises four main phases (codes were provided with AD and AR as example
 ### 1.	Phenotypic Association Analysis
 Utilizing data from large cohorts (e.g., the UK Biobank) to evaluate the phenotypic associations between complex diseases using logistic regression models.
 ### 2.	Genetic Correlation and Causal Inference
-Employing Linkage Disequilibrium Score Regression (LDSC) to assess genetic correlation between complex diseases.
-Using MiXeR program to estimate polygenic overlap.
+Employing Linkage Disequilibrium Score Regression (LDSC) to assess genetic correlation between complex diseases.\
+Using MiXeR program to estimate polygenic overlap.\
 Performing bidirectional two-sample Mendelian Randomization (MR) analyses using the most suitable MR method for each MR analysis in different scenarios to minimize potential bias that caused by unsuitable methods. The most suitable MR method selection was described in detail in our previous studies (Rao _et al._, _J. Allergy Clin. Immunol._, 2025; Rao _et al._, _Nutrients_, 2023; Chen _et al._, _J. Transl. Med._, 2024).
 ### 3.	Shared Genetic Architecture Exploration
-Exploring the shared genetic basis between complex diseases at four levels:
-Genetic Loci: Identifying common risk SNPs and loci using the Pairwise GWAS-PW program.
-Enriched Tissues: Employing LDSC-SEG program to detect tissue-specific heritability enrichments.
-Functional Genes: Integrating SMR analysis with tissue-specific bulk RNA sequencing eQTL data to pinpoint functional genes.
+Exploring the shared genetic basis between complex diseases at four levels:\
+Genetic Loci: Identifying common risk SNPs and loci using the Pairwise GWAS-PW program.\
+Enriched Tissues: Employing LDSC-SEG program to detect tissue-specific heritability enrichments.\
+Functional Genes: Integrating SMR analysis with tissue-specific bulk RNA sequencing eQTL data to pinpoint functional genes.\
 Specific cell types: Using MAGMA.Celltyping program with tissue-specific single-cell RNA sequencing eQTL data to identify key cell type.
 ### 4.	Causal correlations with cognitive ability and behavioral symptoms 
-    Assessing the genetic causal effects of complex diseases on changes in general cognitive ability and behavioral symptoms by bidirectional MR analyses, revealing the broader neuropsychological impacts.
+Assessing the genetic causal effects of complex diseases on changes in general cognitive ability and behavioral symptoms by bidirectional MR analyses, revealing the broader neuropsychological impacts.
 ## Dependency
 GCLink is primarily built using Python (≥3.7) and R (≥4.3.0). 
 ## Citation
