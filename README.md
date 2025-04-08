@@ -7,7 +7,7 @@ Utilizing data from large cohorts (e.g., the UK Biobank) to evaluate the phenoty
 ### 2.	Genetic Correlation and Causal Inference
 (1) Employing Linkage Disequilibrium Score Regression (LDSC) to assess genetic correlations between complex diseases.\
 (2) Using MiXeR program to estimate polygenic overlap.\
-(3) Performing bidirectional two-sample Mendelian Randomization (MR) analyses to investigate genetic causal correlations between complex diseases. By using the most suitable MR method for each MR analysis in different scenarios, we can minimize potential bias that caused by unsuitable methods. The most suitable MR method selection was described in detail in our previous studies (Rao _et al._, _J. Allergy Clin. Immunol._, 2025; Rao _et al._, _Nutrients_, 2023; Chen _et al._, _J. Transl. Med._, 2024).
+(3) Performing bidirectional two-sample Mendelian Randomization (MR) analyses to investigate genetic causal correlations between complex diseases. By using the most suitable MR method for each MR analysis in different scenarios, we can minimize potential bias that caused by unsuitable methods. The most suitable MR method selection was described in detail in our previous studies (Rao _et al._, _J. Allergy Clin. Immunol._, 2025; Chen _et al._, _J. Transl. Med._, 2024; Rao _et al._, _Nutrients_, 2023).
 ### 3.	Shared Molecular Mechanisms Exploration
 (1) Causal correlations with hematological traits and immune-related cells counts.  
 (2) Exploring the shared genetic architecture between complex diseases at four levels:\
