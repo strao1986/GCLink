@@ -1,1 +1,0 @@
-Before running these scripts, you need to download and activate 'ldsc' conda environment according to tutorials from https://github.com/bulik/ldsc
