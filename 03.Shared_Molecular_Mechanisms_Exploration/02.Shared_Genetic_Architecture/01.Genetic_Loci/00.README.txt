@@ -1,0 +1,1 @@
+Before running these scripts, you should install GWAS-PW software according to the tutorials in https://github.com/joepickrell/gwas-pw
