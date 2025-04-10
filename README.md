@@ -18,7 +18,7 @@ Specific cell types: Using MAGMA.Celltyping program with tissue-specific single-
 ### 4.	Causal correlations with cognitive ability and behavioral symptoms 
 Assessing the genetic causal effects of complex diseases on changes in general cognitive ability and behavioral symptoms by bidirectional MR analyses, revealing the broader neuropsychological impacts.
 ## Reference panels and preprocessed GWAS summary statistics downloading
-The following resources are available for downloading from our Google Drive repository (Link: ):  
+The following resources are available for downloading from our Google Drive repository (Link: https://drive.google.com/drive/folders/1p3nH8z8tztblVUdQZzyPrZRj8l7Mtq9Y?usp=sharing):  
 (1) Reference panels required in scripts running.\
 (2) Preprocessed GWAS summary statistics for example diseases (AD and AR), hematological traits, immune-related cells counts, general cognitive ability and behavioral symptoms.
 ## Dependency
