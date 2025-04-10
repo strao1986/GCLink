@@ -17,6 +17,10 @@ Functional Genes: Integrating SMR analysis with tissue-specific bulk RNA sequenc
 Specific cell types: Using MAGMA.Celltyping program with tissue-specific single-cell RNA sequencing eQTL data to identify key cell type.
 ### 4.	Causal correlations with cognitive ability and behavioral symptoms 
 Assessing the genetic causal effects of complex diseases on changes in general cognitive ability and behavioral symptoms by bidirectional MR analyses, revealing the broader neuropsychological impacts.
+## Reference panels and preprocessed GWAS summary statistics downloading
+The following resources are available for downloading from our Google Drive repository (Link: ):  
+(1) Reference panels required in scripts running.\
+(2) Preprocessed GWAS summary statistics for example diseases (AD and AR), hematological traits, immune-related cells counts, general cognitive ability and behavioral symptoms.
 ## Dependency
 GCLink is primarily built using Python (≥3.7) and R (≥4.3.0). 
 ## Citation
