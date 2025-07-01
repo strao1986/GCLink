@@ -1,6 +1,13 @@
 # GCLink：Genetic Causality and Linking Molecular Mechanisms
 GCLink is an integrated analytical pipeline designed to uncover the genetic causal relationships and shared molecular mechanisms between complex diseases, such as anxiety disorder (AD) and allergic rhinitis (AR). By employing large-scale epidemiological data, GWAS summary statistics, bulk-tissue and single-cell RNA sequencing eQTL datasets, GCLink provides a robust multi-stage approach for genetic causal inference and shared molecular mechanisms exploration.
 ## Overview
+### GWAS Summary Statistics Format
+The input GWAS summary statistics used in this pipeline must be preprocessed as follows:\
+(1) Excluding SNPs located on sex chromosomes.\
+(2) Removing duplicated SNPs.\
+(3) Standardizing column names to match the required format: chr, pos, rsid, A1 (effect allele), A2 (reference allele), beta, se, p, eaf, N.\
+An example of properly formatted GWAS summary statistics is provided in the repository for reference.\
+
 GCLink comprises four main phases (codes were provided with AD and AR as examples):
 ### 1.	Phenotypic Association Analysis
 Employing large-scale epidemiological datasets (e.g., from the UK Biobank project) to establish logistic regression models for systematically evaluating phenotypic associations between complex diseases.
